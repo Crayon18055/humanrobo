@@ -1,0 +1,93 @@
+humanrobo:
+  # Publish all joint states -----------------------------------
+ 
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100 
+  
+
+  gazebo_ros_control:
+    pid_gains:
+      L_hip_IO:
+        p: 30.0
+        i: 0.0
+        d: 0.01
+      L_thign_SP:
+        p: 10.0
+        i: 0.0
+        d: 0.01
+      L_thign_BF:
+        p: 25.0
+        i: 0.0
+        d: 0.005
+      L_knee:
+        p: 25.0
+        i: 0.0
+        d: 0.005
+      L_ankle_BF:
+        p: 30.0
+        i: 0.0
+        d: 0.008
+      L_foot:
+        p: 30.0
+        i: 0.0
+        d: 0.008
+      R_hip_IO:
+        p: 30.0
+        i: 0.0
+        d: 0.01
+      R_thign_SP:
+        p: 10.0
+        i: 0.0
+        d: 0.01
+      R_thign_BF:
+        p: 25.0
+        i: 0.0
+        d: 0.005
+      R_knee:
+        p: 25.0
+        i: 0.0
+        d: 0.005
+      R_ankle_BF:
+        p: 30.0
+        i: 0.0
+        d: 0.008
+      R_foot:
+        p: 30.0
+        i: 0.0
+        d: 0.008
+
+  human_controller:
+      type: position_controllers/JointGroupPositionController
+      joints: 
+          # - neck_yaw
+          # - neck_roll
+          # - neck_pitch
+          # - L_shoulder_BF
+          # - L_shoulder_IO
+          # - L_elbow_SP
+          # - L_elbow_BD
+          # - L_hand
+          # - R_shoulder_BF
+          # - R_shoulder_IO
+          # - R_elbow_SP
+          # - R_elbow_BD
+          # - R_hand
+          # - waist_bow
+          # - waist_SP
+          - L_hip_IO
+          - L_thign_SP
+          - L_thign_BF
+          - L_knee
+          - L_ankle_BF
+          - L_foot
+          - R_hip_IO
+          - R_thign_SP
+          - R_thign_BF
+          - R_knee
+          - R_ankle_BF
+          - R_foot
+  
+
+
+
